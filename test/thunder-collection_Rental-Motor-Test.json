@@ -1,0 +1,892 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Rental-Motor-Test",
+    "collectionId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+    "dateExported": "2024-07-19T18:01:14.407Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "3e4d5152-6a37-4936-99a0-6e183b17f3b8",
+            "name": "auth",
+            "containerId": "",
+            "created": "2024-05-21T07:45:03.275Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "motor",
+            "containerId": "",
+            "created": "2024-05-23T07:13:06.234Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "rental",
+            "containerId": "",
+            "created": "2024-05-26T13:53:06.575Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "5d8e6495-efe8-4736-8736-9f2bdea59618",
+            "name": "admin",
+            "containerId": "",
+            "created": "2024-06-08T07:26:30.506Z",
+            "sortNum": 35000
+        },
+        {
+            "_id": "c4d0baae-f003-4964-b668-a65e91446cc5",
+            "name": "penyewa",
+            "containerId": "",
+            "created": "2024-07-14T23:13:15.983Z",
+            "sortNum": 45000
+        },
+        {
+            "_id": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "pesanan",
+            "containerId": "",
+            "created": "2024-06-11T13:33:24.380Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "pembayaran",
+            "containerId": "",
+            "created": "2024-06-24T07:05:05.979Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "1d5a0f7f-99ee-4225-8464-b8133413bf92",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "3e4d5152-6a37-4936-99a0-6e183b17f3b8",
+            "name": "register",
+            "url": "http://localhost:3000/api/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-21T07:45:18.970Z",
+            "modified": "2024-07-19T09:02:47.789Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "penyewa4@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    },
+                    {
+                        "name": "confPassword",
+                        "value": "123"
+                    },
+                    {
+                        "name": "roleId",
+                        "value": "3"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "a47adc6d-27bf-412d-9a44-a24fa7cca185",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "3e4d5152-6a37-4936-99a0-6e183b17f3b8",
+            "name": "login",
+            "url": "http://localhost:3000/api/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-05-21T09:18:27.927Z",
+            "modified": "2024-07-19T09:02:56.073Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "penyewa4@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "6ef5e5b4-abb0-4f1b-b77a-149db926c026",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "add motor",
+            "url": "http://localhost:3000/api/motor",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-05-23T07:13:20.386Z",
+            "modified": "2024-07-18T15:40:40.977Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nama",
+                        "value": "Honda Beat 125 2020"
+                    },
+                    {
+                        "name": "harga",
+                        "value": "110000"
+                    },
+                    {
+                        "name": "userId",
+                        "value": "u2khf"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\acer\\Downloads\\API-Settings-Supabase.png"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "57f31807-79fb-44ba-baeb-b94190c26c5d",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "update rental by userId",
+            "url": "http://localhost:3000/api/rental",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-05-26T13:53:06.575Z",
+            "modified": "2024-07-18T15:25:23.166Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nama",
+                        "value": "Lumens2"
+                    },
+                    {
+                        "name": "noHp",
+                        "value": ""
+                    },
+                    {
+                        "name": "alamat",
+                        "value": ""
+                    },
+                    {
+                        "name": "kotaId",
+                        "value": "1"
+                    },
+                    {
+                        "name": "userId",
+                        "value": "u2khf"
+                    },
+                    {
+                        "name": "bankId",
+                        "value": "mandiri"
+                    },
+                    {
+                        "name": "noRekening",
+                        "value": "898238493"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\acer\\Downloads\\foto bapak bapak di tengah rel kreta.jpg",
+                        "isDisabled": true
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f77c148c-f144-4212-abea-54dc12de4645",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c4d0baae-f003-4964-b668-a65e91446cc5",
+            "name": "update penyewa by userId",
+            "url": "http://localhost:3000/api/penyewa",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-07-14T23:13:15.987Z",
+            "modified": "2024-07-17T06:08:11.066Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nama",
+                        "value": "nama penyewa",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "noHp",
+                        "value": "08987686999",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "userId",
+                        "value": "u3nsq"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\acer\\Downloads\\foto bapak bapak di tengah rel kreta.jpg"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUzY1JtIiwiZW1haWwiOiJwZW55ZXdhNEBnbWFpbC5jb20iLCJyb2xlSWQiOjMsImlhdCI6MTcxNzE1NTkzMywiZXhwIjoxNzE3MTU1OTYzfQ.k3rYQA83yVChBnd1fIdnZnQJXGdNnPwLk5jUyVZ61ow"
+            }
+        },
+        {
+            "_id": "46b6db86-f8fb-4e48-a750-00e158ad4c67",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "get motors",
+            "url": "http://localhost:3000/api/motors?rentalId=rkalo",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-05-23T14:00:22.760Z",
+            "modified": "2024-07-19T06:11:21.763Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "u2khf",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "rentalId",
+                    "value": "rkalo",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "cf15de3a-e744-4f3b-b881-85f267c89813",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "get satu rental",
+            "url": "http://localhost:3000/api/rental?userId=u2khf",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-05-26T13:53:06.576Z",
+            "modified": "2024-07-18T15:17:43.672Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "rentalId",
+                    "value": "rkalo",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "userId",
+                    "value": "u2khf",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "0349480c-74e1-4357-b968-ebdc4c71c270",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "5d8e6495-efe8-4736-8736-9f2bdea59618",
+            "name": "get unverified rental",
+            "url": "http://localhost:3000/api/rental/unverified",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-06-08T07:26:30.507Z",
+            "modified": "2024-06-08T07:31:13.529Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "f2a3053b-b4d6-410b-8e5d-b01059404e04",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c4d0baae-f003-4964-b668-a65e91446cc5",
+            "name": "get profile penyewa by userid",
+            "url": "http://localhost:3000/api/penyewa?userId=u3nsq",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-07-14T23:13:15.987Z",
+            "modified": "2024-07-16T07:15:26.194Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "u3nsq",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "febd14d2-79d9-43bc-932b-bf92e5afc40b",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "get rentals by kota id",
+            "url": "http://localhost:3000/api/rentals?kotaId=2",
+            "method": "GET",
+            "sortNum": 62500,
+            "created": "2024-07-01T07:59:21.955Z",
+            "modified": "2024-07-16T15:07:22.839Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "kotaId",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "kotaId",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "3872e9b3-793e-4d79-8438-05d75cefdf4e",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "get all kota",
+            "url": "http://localhost:3000/api/kotas",
+            "method": "GET",
+            "sortNum": 63750,
+            "created": "2024-07-05T07:48:15.213Z",
+            "modified": "2024-07-16T15:00:02.328Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "6de70f8c-b9c2-4eb6-bf84-0a26ea5167d3",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "get all bank",
+            "url": "http://localhost:3000/api/banks",
+            "method": "GET",
+            "sortNum": 64375,
+            "created": "2024-07-18T14:58:36.500Z",
+            "modified": "2024-07-18T15:01:18.217Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "b384fbc4-c5fe-4164-aff2-8ce462a2fa5d",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "save bank rental by userid",
+            "url": "http://localhost:3000/api/rental/bank",
+            "method": "POST",
+            "sortNum": 65000,
+            "created": "2024-06-10T16:44:34.714Z",
+            "modified": "2024-07-03T22:59:59.442Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "bankId",
+                        "value": "bca"
+                    },
+                    {
+                        "name": "noRekening",
+                        "value": "99999"
+                    },
+                    {
+                        "name": "userId",
+                        "value": "u2pg7"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f661c5e6-61ef-4d94-a538-3b5bef3e9104",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "get bank rental by userid",
+            "url": "http://localhost:3000/api/rental/bank",
+            "method": "GET",
+            "sortNum": 67500,
+            "created": "2024-06-10T16:44:54.238Z",
+            "modified": "2024-07-03T23:06:49.410Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userId",
+                        "value": "u2pg7"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUyN2ciLCJlbWFpbCI6ImFkZEBnbWFpbC5jb20iLCJyb2xlSWQiOjIsImlhdCI6MTcxNzI1NDMxMCwiZXhwIjoxNzE3MjU0NTEwfQ.kEO8lG1GBq8yrVcqxAHmMZrSjRXB6jTLWroRapg7qIc"
+            }
+        },
+        {
+            "_id": "8f7bfbc6-7d4d-4f08-ac45-a1dcfe0ac7e5",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "get motor by id",
+            "url": "http://localhost:3000/api/motor?motorId=mizq2h",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-05-23T14:17:58.375Z",
+            "modified": "2024-07-18T15:41:52.810Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "motorId",
+                    "value": "mizq2h",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "ac7752cc-2987-4e0c-b937-1e2a0b6a797d",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "fb1e532f-453f-4702-8147-3c3c5b648355",
+            "name": "create verification rental",
+            "url": "http://localhost:3000/api/rental/create-verification",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-02T14:39:15.841Z",
+            "modified": "2024-06-11T07:33:38.032Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userId",
+                        "value": "u2lVz"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "fotoRental",
+                        "value": "c:\\Users\\acer\\Downloads\\relasi database rental motor (1).png"
+                    },
+                    {
+                        "name": "fotoRental",
+                        "value": "c:\\Users\\acer\\Downloads\\API-Settings-Supabase.png"
+                    },
+                    {
+                        "name": "fotoRental",
+                        "value": "c:\\Users\\acer\\Downloads\\contoh vscode.png"
+                    },
+                    {
+                        "name": "fotoRental",
+                        "value": "c:\\Users\\acer\\Downloads\\API-Settings-Supabase.png"
+                    },
+                    {
+                        "name": "fotoRental",
+                        "value": "c:\\Users\\acer\\Downloads\\bfaf692c886bef576eaae1e712c0d92a.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "db160d1c-cfed-4d20-84f6-650541279f9b",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "5d8e6495-efe8-4736-8736-9f2bdea59618",
+            "name": "approve verification rental",
+            "url": "http://localhost:3000/api/rental/approve-verification",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-08T09:05:15.264Z",
+            "modified": "2024-06-08T13:00:15.484Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "rentalId",
+                        "value": "rkHd4"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f018fbd5-a14c-482e-9ba1-71d92f981100",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "create pesanan",
+            "url": "http://localhost:3000/api/pesanan",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-11T13:33:24.381Z",
+            "modified": "2024-07-07T14:12:59.881Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tanggalMulai\": \"2024-07-30\",\n  \"tanggalSelesai\": \"2024-07-30\",\n  \"lokasiAmbil\": \"rental\",\n  \"lokasiKembali\": \"rental\",\n  \"waktuAmbil\": \"05:50\",\n  \"waktuKembali\": \"20:00\",\n  \"jaminanId\": \"2\",\n  \"penyewaId\": \"pfpod\",\n  \"motorId\": \"mmqhy\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "906102a3-6fb8-481e-af02-fa300d931270",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "update motor",
+            "url": "http://localhost:3000/api/motor",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-05-24T07:59:58.826Z",
+            "modified": "2024-07-18T16:10:00.848Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "merek",
+                        "value": ""
+                    },
+                    {
+                        "name": "tahun",
+                        "value": ""
+                    },
+                    {
+                        "name": "harga",
+                        "value": "99"
+                    },
+                    {
+                        "name": "motorId",
+                        "value": "meqbh"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\acer\\Downloads\\alfamart.png",
+                        "isDisabled": true
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "28d51c3c-9b96-4ee4-9fa2-05da7ef3c0f0",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "5d8e6495-efe8-4736-8736-9f2bdea59618",
+            "name": "reject verification rental",
+            "url": "http://localhost:3000/api/rental/reject-verification",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-06-08T09:08:01.590Z",
+            "modified": "2024-06-11T07:25:47.811Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "rentalId",
+                        "value": "rkHd4"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f4046af4-095d-4cfe-8a88-cc01214c8b30",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "get pesanan by pesanan id",
+            "url": "http://localhost:3000/api/pesanan?pesananId=ps0t279r",
+            "method": "GET",
+            "sortNum": 85000,
+            "created": "2024-06-13T06:28:58.201Z",
+            "modified": "2024-07-18T01:09:00.486Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pesananId",
+                    "value": "ps0t279r",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "174d9d19-79d6-4229-b930-549943da1831",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "c1ca3626-6319-4cb7-b61b-f1447061e866",
+            "name": "delete motor by id",
+            "url": "http://localhost:3000/api/motor?motorId=mststl",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-05-24T15:23:30.659Z",
+            "modified": "2024-07-16T14:57:48.560Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "motorId",
+                    "value": "mststl",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "92373d83-d98c-46a3-9e5e-4ac321d6b951",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "get pesanan penyewa",
+            "url": "http://localhost:3000/api/pesanan/penyewa?userId=u3nsq",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-06-11T13:44:21.763Z",
+            "modified": "2024-07-16T08:01:16.959Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "u3nsq",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "04422a41-005b-4a82-b66e-30867a246970",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "get pesanan rental",
+            "url": "http://localhost:3000/api/pesanan/rental?userId=u2khf",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-06-12T15:22:35.781Z",
+            "modified": "2024-07-16T08:04:09.845Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "u2khf",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "e1e9c868-8ba0-4284-bc1c-4369dbc92c47",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "get pesanan laporan",
+            "url": "http://localhost:3000/api/pesanan/laporan?userId=u2khf&bulan=7&tahun=2024",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-07-01T11:51:46.272Z",
+            "modified": "2024-07-19T06:38:06.733Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "u2khf",
+                    "isPath": false
+                },
+                {
+                    "name": "bulan",
+                    "value": "7",
+                    "isPath": false
+                },
+                {
+                    "name": "tahun",
+                    "value": "2024",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "a93c8a16-d006-4731-ac28-a7b295c07e91",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "create transaction",
+            "url": "http://localhost:3000/api/pembayaran?pesananId=psotfdgr",
+            "method": "POST",
+            "sortNum": 125000,
+            "created": "2024-07-04T18:40:34.755Z",
+            "modified": "2024-07-16T15:03:37.751Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pesananId",
+                    "value": "psotfdgr",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "cca1bb45-8c7f-4aef-b8e8-ca679700eb9c",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "get transaction",
+            "url": "http://localhost:3000/api/pembayaran?pesananId=psotfdgr",
+            "method": "GET",
+            "sortNum": 127500,
+            "created": "2024-07-10T23:08:57.176Z",
+            "modified": "2024-07-16T15:04:26.607Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pesananId",
+                    "value": "psotfdgr",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "f415b857-678d-4979-84d2-2d4b2782eeb0",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "notifikasi pembayaran",
+            "url": "http://localhost:3000/api/notifikasi-pembayaran",
+            "method": "POST",
+            "sortNum": 128750,
+            "created": "2024-06-24T12:35:06.365Z",
+            "modified": "2024-07-16T14:46:14.026Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "order_id",
+                        "value": "ps4f1gfu"
+                    },
+                    {
+                        "name": "transaction_time",
+                        "value": "2024-06-30 06:34:05.262"
+                    },
+                    {
+                        "name": "settlement_time",
+                        "value": "2024-06-30 06:34:05.262"
+                    },
+                    {
+                        "name": "payment_type",
+                        "value": "mantul"
+                    },
+                    {
+                        "name": "transaction_status",
+                        "value": "settlement"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "327e5797-d474-48d0-a021-176a0c598ebf",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "bukti pembayaran",
+            "url": "http://localhost:3000/api/pembayaran/bukti",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-06-24T07:05:17.169Z",
+            "modified": "2024-07-04T18:49:33.692Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "pesananId",
+                        "value": "psqoxamw"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "bukti",
+                        "value": "c:\\Users\\acer\\Downloads\\dunia coding uiux 1.png"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "eaddd0ea-2913-461d-a4a9-5c69f1182c68",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "accept status pembayaran",
+            "url": "http://localhost:3000/api/pembayaran/accept",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-07-04T18:48:31.825Z",
+            "modified": "2024-07-04T18:53:26.635Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "pesananId",
+                        "value": "psqoxamw"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "ccb8ff5c-1658-4033-8cd1-a4e8a51928e1",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "1ba8230e-af79-444c-b3a9-d1d6284361d7",
+            "name": "get all jaminan",
+            "url": "http://localhost:3000/api/jaminans",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-07-07T12:23:23.242Z",
+            "modified": "2024-07-16T15:00:56.250Z",
+            "headers": []
+        },
+        {
+            "_id": "48c3cdc7-6626-4c29-a1c6-365a4732e42b",
+            "colId": "3ca06177-d2ff-46b7-b7d9-b52b73c35171",
+            "containerId": "71e1e010-130f-4d6f-9319-c90517011f6f",
+            "name": "reject status pembayaran",
+            "url": "http://localhost:3000/api/pembayaran/reject",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-07-04T18:57:44.261Z",
+            "modified": "2024-07-04T18:57:59.432Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "pesananId",
+                        "value": "psqoxamw"
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "VcolrE1A5bLNUFSTGD4Tms6OxWrhpYGu-ZSMND7N5iVMb0FSrwkgkoK1X1ZRkRK6fhC9_GM-OIiEdsA5vDgSog"
+}

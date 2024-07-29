@@ -1,0 +1,188 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Role {
+  id   Int    @id
+  nama String
+
+  // relasi : One-to-Many
+  user User[]
+
+  @@map("role")
+}
+
+model User {
+  id       String @id
+  email    String @unique
+  password String
+  roleId   Int    @map("role_id")
+
+  // relasi : Many-to-One
+  role Role @relation(fields: [roleId], references: [id])
+
+  // relasi: One-to-One
+  admin   Admin?
+  rental  Rental?
+  penyewa Penyewa?
+
+  @@map("user")
+}
+
+model Admin {
+  id     String  @id
+  nama   String?
+  userId String  @unique @map("user_id")
+
+  // relasi: One-to-One
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("admin")
+}
+
+model Bank {
+  id   String @id
+  nama String
+
+  // relasi: One-to-Many
+  rental Rental[]
+
+  @@map("bank")
+}
+
+model Kota {
+  id   Int    @id
+  nama String
+
+  // relasi: One-to-Many
+  rental Rental[]
+
+  @@map("kota")
+}
+
+model Rental {
+  id         String  @id
+  nama       String?
+  noHp       String? @map("no_hp")
+  alamat     String?
+  foto       String?
+  noRekening String? @map("no_rekening")
+  kotaId     Int?    @map("kota_id")
+  bankId     String? @map("bank_id")
+  userId     String  @unique @map("user_id")
+
+  // relasi: Many-to-One
+  kota  Kota?   @relation(fields: [kotaId], references: [id])
+  bank  Bank?   @relation(fields: [bankId], references: [id])
+  user  User    @relation(fields: [userId], references: [id])
+  // relasi: One-to-Many
+  motor Motor[]
+
+  @@map("rental")
+}
+
+model Penyewa {
+  id     String  @id
+  nama   String?
+  noHp   String? @map("no_hp")
+  foto   String?
+  userId String  @unique @map("user_id")
+
+  // relasi: One-to-One
+  user    User      @relation(fields: [userId], references: [id])
+  // relasi: One-to-Many
+  pesanan Pesanan[]
+
+  @@map("penyewa")
+}
+
+model Motor {
+  id       String @id
+  nama     String
+  harga    Int
+  foto     String
+  rentalId String @map("rental_id")
+
+  // relasi: Many-to-One
+  rental  Rental    @relation(fields: [rentalId], references: [id])
+  // relasi: One-to-Many
+  pesanan Pesanan[]
+
+  @@map("motor")
+}
+
+model Jaminan {
+  id   Int    @id
+  nama String
+
+  // relasi: One-to-Many
+  pesanan Pesanan[]
+
+  @@map("jaminan")
+}
+
+model Pesanan {
+  id             String   @id
+  totalHarga     Int
+  waktuPesan     DateTime
+  tanggalMulai   DateTime
+  tanggalSelesai DateTime
+  durasi         Int
+  lokasiAmbil    String
+  lokasiKembali  String
+  waktuAmbil     String
+  waktuKembali   String
+  status         String
+  jaminanId      Int
+  penyewaId      String
+  motorId        String
+
+  // relasi: Many-to-One
+  jaminan Jaminan @relation(fields: [jaminanId], references: [id])
+  penyewa Penyewa @relation(fields: [penyewaId], references: [id])
+  motor   Motor   @relation(fields: [motorId], references: [id])
+
+  // relasi: One-to-One
+  pembayaran Pembayaran?
+
+  @@map("pesanan")
+}
+
+model Pembayaran {
+  id                String    @id
+  waktuDibuat       DateTime? @map("waktu_dibuat")
+  waktuDikonfirmasi DateTime? @map("waktu_dikonfirmasi")
+  metode            String?
+  status            String?
+  url               String?
+  pesananId         String    @unique @map("pesanan_id")
+
+  // relasi: Many-to-One
+  pesanan Pesanan @relation(fields: [pesananId], references: [id])
+
+  @@map("pembayaran")
+}
+
+// model Pembayaran {
+//   id         String  @id
+//   totalHarga Int?    @map("total_harga")
+//   status     String?
+//   bukti      String?
+//   pesananId  String  @unique @map("pesanan_id")
+
+//   // relasi: Many-to-One
+//   pesanan Pesanan @relation(fields: [pesananId], references: [id])
+
+//   @@map("pembayaran")
+// }

@@ -1,0 +1,7 @@
+27/07/2024
+-nambahin get all bank
+-nambahin data bank pada update rental
+-menambahkan data seed untuk rental
+-menambahkan filter bulan dan tahun serta orderby asc di pesanan
+-nambahin status di pesanan dan ketika berhasil bayar rubah satatus pesanan ke 'success'
+-ganti pembayaran ke prod
