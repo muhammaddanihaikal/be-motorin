@@ -20,9 +20,6 @@ app.use(express.json()); // baca data json dari body
 // app.use(express.urlencoded({ extended: false })); // baca data dari form body
 
 // upload.none(): menghandle pengiriman data dari form
-app.use("/", (req, res) => {
-  res.send("hello world2");
-});
 app.use("/api", router);
 
 app.listen(port, () => {
