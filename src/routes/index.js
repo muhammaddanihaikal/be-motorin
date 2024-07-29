@@ -9,11 +9,6 @@ import { pembayaranRouter } from "./pembayaranRoutes.js";
 
 const router = express.Router();
 
-// route '/'
-router.get("/", (req, res) => {
-  res.send("hello world");
-});
-
 // pakai route
 router.use(authRouter);
 router.use(motorRouter);
