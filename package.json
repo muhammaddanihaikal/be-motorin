@@ -9,7 +9,8 @@
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js",
     "seed": "node ./src/seeders/seed.js",
-    "migrate": "rm -rf ./prisma/migrations && npx prisma migrate dev --name init"
+    "migrate": "rm -rf ./prisma/migrations && npx prisma migrate dev --name init",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
